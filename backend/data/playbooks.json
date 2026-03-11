@@ -1,0 +1,194 @@
+{
+  "playbooks": [
+    {
+      "scenario_id": "vpn_001",
+      "scenario_name": "VPN Connectivity Issue",
+      "category": "Network",
+      "user_intent_examples": [
+        "can't connect to vpn",
+        "vpn not working",
+        "vpn connection failed"
+      ],
+      "classification_keywords": [
+        "vpn",
+        "connect",
+        "network",
+        "remote access"
+      ],
+      "troubleshooting_steps": [
+        "Check if VPN client is installed and running",
+        "Verify network connectivity to the internet",
+        "Check VPN server status",
+        "Validate VPN credentials",
+        "Try connecting from a different network",
+        "Clear VPN client cache"
+      ],
+      "ticketing": {
+        "create_on_escalation": true,
+        "default_priority": "High",
+        "resolver_group": "Network Support"
+      },
+      "automation": {
+        "can_auto_resolve": false,
+        "requires_restart": true
+      },
+      "escalation": {
+        "threshold": 3,
+        "escalate_to": "Network Team",
+        "auto_create_incident": true
+      }
+    },
+    {
+      "scenario_id": "pwd_001",
+      "scenario_name": "Password Reset",
+      "category": "Identity",
+      "user_intent_examples": [
+        "forgot my password",
+        "reset password",
+        "can't login"
+      ],
+      "classification_keywords": [
+        "password",
+        "login",
+        "reset",
+        "credentials"
+      ],
+      "troubleshooting_steps": [
+        "Verify user identity",
+        "Check if account is locked",
+        "Initiate password reset workflow",
+        "Send reset link to registered email",
+        "Provide temporary password"
+      ],
+      "ticketing": {
+        "create_on_escalation": false,
+        "default_priority": "Medium",
+        "resolver_group": "Identity Management"
+      },
+      "automation": {
+        "can_auto_resolve": true,
+        "requires_restart": false
+      },
+      "escalation": {
+        "threshold": 2,
+        "escalate_to": "IAM Team",
+        "auto_create_incident": true
+      }
+    },
+    {
+      "scenario_id": "sw_001",
+      "scenario_name": "Software Installation Issue",
+      "category": "Software",
+      "user_intent_examples": [
+        "can't install software",
+        "installation failed",
+        "software not installing"
+      ],
+      "classification_keywords": [
+        "install",
+        "software",
+        "application",
+        "setup"
+      ],
+      "troubleshooting_steps": [
+        "Check system requirements",
+        "Verify administrator privileges",
+        "Check available disk space",
+        "Disable antivirus temporarily",
+        "Run installer as administrator",
+        "Check Windows Installer service"
+      ],
+      "ticketing": {
+        "create_on_escalation": true,
+        "default_priority": "Medium",
+        "resolver_group": "Desktop Support"
+      },
+      "automation": {
+        "can_auto_resolve": false,
+        "requires_restart": true
+      },
+      "escalation": {
+        "threshold": 3,
+        "escalate_to": "Software Team",
+        "auto_create_incident": true
+      }
+    },
+    {
+      "scenario_id": "hw_001",
+      "scenario_name": "Laptop Hardware Failure",
+      "category": "Hardware",
+      "user_intent_examples": [
+        "laptop won't turn on",
+        "hardware issue",
+        "device not working"
+      ],
+      "classification_keywords": [
+        "hardware",
+        "laptop",
+        "device",
+        "failure"
+      ],
+      "troubleshooting_steps": [
+        "Perform power cycle",
+        "Check power adapter connection",
+        "Check for physical damage",
+        "Run hardware diagnostics",
+        "Check device manager for errors",
+        "Test with minimal hardware configuration"
+      ],
+      "ticketing": {
+        "create_on_escalation": true,
+        "default_priority": "Critical",
+        "resolver_group": "Hardware Support"
+      },
+      "automation": {
+        "can_auto_resolve": false,
+        "requires_restart": false
+      },
+      "escalation": {
+        "threshold": 2,
+        "escalate_to": "Hardware Team",
+        "auto_create_incident": true
+      }
+    },
+    {
+      "scenario_id": "perf_001",
+      "scenario_name": "Device Performance Degradation",
+      "category": "Performance",
+      "user_intent_examples": [
+        "laptop is very slow",
+        "system lagging",
+        "performance issue"
+      ],
+      "classification_keywords": [
+        "slow",
+        "performance",
+        "lag",
+        "speed"
+      ],
+      "troubleshooting_steps": [
+        "Check task manager for high resource usage",
+        "Close unnecessary applications",
+        "Check for Windows updates",
+        "Run disk cleanup",
+        "Check for malware",
+        "Defragment hard drive (if HDD)",
+        "Check startup programs"
+      ],
+      "ticketing": {
+        "create_on_escalation": true,
+        "default_priority": "Medium",
+        "resolver_group": "Desktop Support"
+      },
+      "automation": {
+        "can_auto_resolve": true,
+        "requires_restart": true
+      },
+      "escalation": {
+        "threshold": 4,
+        "escalate_to": "Performance Team",
+        "auto_create_incident": true
+      }
+    }
+  ]
+}

@@ -3,6 +3,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Node modules
+node_modules/
+
+# Build outputs
+.next/
+dist/
+out/
+
+# Logs
+*.log
 # C extensions
 *.so
 
